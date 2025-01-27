@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: m3p12s7mx-go-gitops
+  description: This is GitOps manifest for m3p12s7mx-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: m3p12s7mx-go
+    backstage.io/kubernetes-id: m3p12s7mx-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: m3p12s7mx-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:m3p12s7mx-go
